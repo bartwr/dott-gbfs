@@ -15,7 +15,7 @@ const generateSignedToken = (credentials) => jsonWebToken.sign(
   {
     algorithm: 'RS256',
     audience: 'https://gbfs.api.ridedott.com',
-    expiresIn: 3600*365,
+    expiresIn: 3600*24*365,
     keyid: credentials.private_key_id,
     issuer: `${credentials.client_email}`,
     subject: credentials.client_email,
